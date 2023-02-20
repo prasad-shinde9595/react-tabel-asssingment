@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+  /*font-family: 'Akaya Kanadaka', cursive;*/
+}
+:root {
+  --primary: orange;
+  --secondary: black;
+  --light: #2f3640;
+}
+header {
+  width: 100%;
+  height: 100vh;
+}
+.nav1 {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  box-shadow: 2px 0px 3px gray;
+  text-align: center;
+}
+.nav1 .left {
+  flex-basis: 50%;
+  letter-spacing: 2px;
+}
+.nav1 .left a {
+  text-decoration: none;
+  background-color: var(--secondary);
+  border: 1px solid wheat;
+  color:var(--primary);
+  padding: 2px;
+  font-weight: bold;
+  margin: 0px 5px;
+}
+.nav1 .left a:hover {
+  background-color: var(--secondary);
+  color: white;
+}
+.right {
+  flex-basis: 50%;
+}
+.right i {
+  font-size: 20px;
+  margin: 0px 15px;
+  background-color: var(--primary);
+  color: black;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.nav1 .right i:hover {
+  transform: rotate(360deg);
+}
+.nav2 {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.nav2 .nav2-left,
+.nav2 .nav2-center,
+.nav2 .nav2-right {
+  flex-basis: 30%;
+  margin: auto;
+  cursor: pointer;
+}
+.nav2 .nav2-left i {
+  margin: 15px;
+}
+.nav2 .nav2-center h1 {
+  color: var(--primary);
+  font-size: 2rem;
+  letter-spacing: 5px;
+  font-weight: bold;
+}
+.nav2 .nav2-center h1 span {
+  color: var(--secondary);
+  font-family: "Lobster", cursive;
+  font-family: "Permanent Marker", cursive;
+}
+
+.nav2 .nav2-center p {
+  color: gray;
+  font-size: 15px;
+  margin-top: 5px;
+}
+.nav2 .nav2-right i {
+  margin: 0px 10px;
+}
+
+
+/*--------------------------nav3-------------------*/
+
+.nav3 {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+}
+.nav3 ul {
+  list-style: none;
+  text-align: center;
+}
+.nav3 ul li {
+  display: inline-block;
+  width: 150px;
+  position: relative;
+  z-index: 99;
+}
+.nav3 ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+.nav3 ul li a:hover {
+  color: var(--primary);
+}
+.nav3 ul li i {
+  color: var(--primary);
+  margin: 0px 5px;
+}
+.nav3 ul ul {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  display: none;
+}
+.nav3 ul ul li {
+  background-color: white;
+  border-bottom: 1px solid var(--primary);
+}
+.nav3 ul li:hover > ul {
+  display: block;
+}
+.featured {
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(255, 255, 255, 0.2)
+    ),
+    url("imeges/vishu.jpg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+}
+.featured-text {
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  font-family: "Akaya Kanadaka", cursive;
+}
+.featured-text button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  margin: 20px 0px;
+  color: black;
+}
+.latest {
+  padding: 50px 100px;
+}
+.product-intro {
+  text-align: center;
+}
+.product-intro h1 {
+  color: var(--primary);
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.product-intro h1 span {
+  color: var(--secondary);
+}
+.product-intro p {
+  color: gray;
+  margin: 15px 0px;
+}
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin: 4rem 0;
+}
+.card-container .card {
+  flex-basis: 20%;
+  padding: 0.8rem;
+  position: relative;
+}
+.card img {
+  width: 100%;
+  transition: 0.5s ease-in-out;
+}
+.card i {
+  color: goldenrod;
+  margin: 10px 0;
+}
+.card button {
+  color: white;
+  background-color: var(--secondary);
+  border: none;
+  outline: none;
+  margin-top: 15px;
+  padding: 5px 20px;
+}
+.card:hover img,
+.card:hover h1 {
+  width: 80%;
+  color: var(--primary);
+}
+.card::before {
+  content: "20% off";
+  width: 25%;
+  height: 25px;
+  line-height: 25px;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--primary);
+  padding: 0px 4px;
+  transform: rotate(-20deg);
+}
+.trend {
+  padding: 30px 100px;
+  background-color: rgba(0, 0, 0, 0.01);
+  
+}
+.trend h1 span{
+  color: var(--primary);
+}
+.trend .watch{
+  width: 40%;
+  margin-left: 30%;
+ /* height: 250px; */
+  display: flex;
+  background-color:rgba(255, 255, 255, 0.822);
+  position: relative;
+}
+.trend .watch:hover{
+  width: 39%;
+}
+.slide img{
+width: 100%;
+
+}
+.slide h1 {
+  color: var(--secondary);
+  letter-spacing: 0.2rem;
+  font-size: 20px;
+  font-weight: bolder;
+ 
+
+}
+.slide button{
+  color: white;
+  background-color: var(--secondary);
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  padding: 5px 20px;
+  
+}
+
+.slide p {
+  color: gray;
+  margin: 2px 0px;
+ 
+}
+.arrow{
+  cursor: pointer;
+  position: absolute;
+  top: 30%;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.534);
+  padding: 8px 20px;
+  font-size: 20px;
+  transition: 0.2s;
+}
+.arrow:hover{
+  font-size: 15px;
+}
+.next{
+  right: 10px;
+}
+.prev{
+  left: 10px;
+}
+.slide{
+  display: none;
+}
+footer{
+  background-color: var(--secondary);
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 2rem;
+}
+footer div{
+  flex-basis: 30%;
+}
+footer h1{
+  letter-spacing: 0.5rem;
+}
+footer h1 span{
+  color: var(--primary);
+}
+footer p{
+  font-size: 1rem;
+
+}
+footer i{
+  margin: 0px 5px;
+}
+
+
