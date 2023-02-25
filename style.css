@@ -246,6 +246,10 @@ header {
 .trend {
   padding: 30px 100px;
   background-color: rgba(0, 0, 0, 0.01);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   
 }
 .trend h1 span{
@@ -253,8 +257,8 @@ header {
 }
 .trend .watch{
   width: 40%;
-  margin-left: 30%;
- /* height: 250px; */
+  /*margin-left: 30%;
+  height: 250px; */
   display: flex;
   background-color:rgba(255, 255, 255, 0.822);
   position: relative;
